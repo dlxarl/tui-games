@@ -71,6 +71,10 @@ void enrichGameData(Game& g) {
         g.displayName = "TIC-TAC-TOE";
         g.description = "Classic X's and O's. Get three in a row to win!";
     }
+    else if (g.filename == "pacman" || g.filename == "tictactoe") {
+        g.displayName = "PAC-MAN";
+        g.description = "Navigate the maze, eat pellets, and avoid ghosts!";
+    }
     else {
         g.displayName = g.filename;
         std::transform(g.displayName.begin(), g.displayName.end(), g.displayName.begin(), ::toupper);
